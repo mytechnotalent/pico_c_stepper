@@ -1,0 +1,34 @@
+# Override language detection for this embedded C project
+*.c linguist-language=C
+*.h linguist-language=C
+main.c linguist-language=C
+src/*.c linguist-language=C
+src/*.h linguist-language=C
+
+# CMake build system files
+*.cmake linguist-language=CMake
+CMakeLists.txt linguist-language=CMake
+pico_sdk_import.cmake linguist-language=CMake
+
+# Mark shell scripts as utilities, not primary language
+*.sh linguist-vendored
+generate_reverse_engineering_data.sh linguist-vendored
+
+# Mark build artifacts and generated files as generated
+build/* linguist-generated
+data/* linguist-generated
+
+# Documentation and media files
+*.md linguist-documentation
+*.txt linguist-documentation
+README.md linguist-documentation
+STEPPER_WIRING.md linguist-documentation
+
+# Image and media files
+*.jpeg linguist-documentation
+*.jpg linguist-documentation
+*.png linguist-documentation
+stepper.jpeg linguist-documentation
+
+# License file
+LICENSE linguist-documentation
