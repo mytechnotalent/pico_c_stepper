@@ -10,6 +10,10 @@ A professional embedded C application for the Raspberry Pi Pico that combines LE
 
 <br>
 
+## Wiring
+![image](https://github.com/mytechnotalent/stepper/blob/main/diagrams/Debug-Probe-Wiring.png?raw=true)
+![image](https://github.com/mytechnotalent/stepper/blob/main/diagrams/stepper.png?raw=true)
+
 ## Features
 
 - **LED Control**: Onboard LED blinking with 1-second cycles
