@@ -1,0 +1,89 @@
+================================================================================
+REVERSE ENGINEERING ANALYSIS REPORT
+================================================================================
+Project: stepper
+Generated: 2025-06-15_12-59-17
+ELF File: build/stepper.elf
+Binary File: build/stepper.bin
+================================================================================
+
+FILE INFORMATION
+================
+build/stepper.elf: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, with debug_info, not stripped
+
+-rwxr-xr-x  1 kevinthomas  staff  393068 Jun 15 11:56 build/stepper.elf
+
+ELF HEADER
+==========
+
+build/stepper.elf:	file format elf32-littlearm
+architecture: arm
+start address: 0x100001e9
+
+SECTION HEADERS
+===============
+
+build/stepper.elf:	file format elf32-littlearm
+
+Sections:
+Idx Name                Size     VMA      LMA      Type
+  0                     00000000 00000000 00000000 
+  1 .boot2              00000100 10000000 10000000 TEXT
+  2 .text               00004080 10000100 10000100 TEXT
+  3 .rodata             00000504 10004180 10004180 DATA
+  4 .binary_info        00000020 10004684 10004684 DATA
+  5 .ram_vector_table   000000c0 20000000 20000000 BSS
+  6 .uninitialized_data 00000000 200000c0 200000c0 
+  7 .data               00000128 200000c0 100046a4 TEXT
+  8 .tdata              00000000 200001e8 200001e8 DATA
+  9 .tbss               00000000 200001e8 100047cc BSS
+ 10 .bss                000003e8 200001e8 100047cc BSS
+ 11 .heap               00000800 200005d0 200005d0 
+ 12 .scratch_x          00000000 20040000 20040000 
+ 13 .scratch_y          00000000 20041000 20041000 
+ 14 .stack_dummy        00000800 20041000 20041000 
+ 15 .ARM.attributes     00000028 00000000 00000000 
+ 16 .comment            00000045 00000000 00000000 
+ 17 .debug_info         0001c5c8 00000000 00000000 DEBUG
+ 18 .debug_abbrev       00004f1c 00000000 00000000 DEBUG
+ 19 .debug_aranges      00000f00 00000000 00000000 DEBUG
+ 20 .debug_rnglists     00002f9c 00000000 00000000 DEBUG
+ 21 .debug_line         000173f0 00000000 00000000 DEBUG
+ 22 .debug_str          00004653 00000000 00000000 DEBUG
+ 23 .debug_frame        00001b44 00000000 00000000 DEBUG
+ 24 .debug_loclists     00011291 00000000 00000000 DEBUG
+ 25 .debug_line_str     00000381 00000000 00000000 DEBUG
+ 26 .symtab             00003040 00000000 00000000 
+ 27 .strtab             000017d8 00000000 00000000 
+ 28 .shstrtab           0000013a 00000000 00000000 
+
+
+GENERATED FILES SUMMARY
+=======================
+1. section_headers.txt          - ELF section information
+2. symbols_sorted.txt           - All symbols sorted by address
+3. symbols_demangled.txt        - Demangled symbol names
+4. dynamic_symbols.txt          - Dynamic symbols (if any)
+5. global_symbols.txt           - Global symbols only
+6. undefined_symbols.txt        - Undefined symbols
+7. full_disassembly.txt         - Complete disassembly
+8. disassembly_with_source.txt  - Disassembly with source code
+9. all_headers.txt              - Complete header information
+10. strings.txt                 - All strings found in binary
+11. strings_min4.txt            - Strings with minimum 4 characters
+12. relocations.txt             - Relocation information
+13. dynamic_info.txt            - Dynamic linking information
+14. hex_dump.txt                - Raw hexadecimal dump of ELF
+15. binary_hex_dump.txt         - Raw hexadecimal dump of binary
+16. function_analysis.txt       - Function and symbol analysis
+17. functions_only.txt          - Function symbols only
+
+USAGE NOTES
+===========
+- Use full_disassembly.txt for complete assembly analysis
+- Check symbols_sorted.txt for memory layout understanding
+- Review strings.txt for embedded text and debug info
+- Examine function_analysis.txt for code structure overview
+- Use hex_dump.txt for low-level binary analysis
+
+Generated on: 2025-06-15_12-59-17

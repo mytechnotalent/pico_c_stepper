@@ -1,0 +1,819 @@
+
+build/stepper.elf:	file format elf32-littlearm
+architecture: arm
+start address: 0x100001e9
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x10000000 paddr 0x10000000 align 2**12
+         filesz 0x000046a4 memsz 0x000046a4 flags r-x
+    LOAD off    0x000060c0 vaddr 0x200000c0 paddr 0x100046a4 align 2**12
+         filesz 0x00000128 memsz 0x00000510 flags rwx
+    LOAD off    0x00000000 vaddr 0x20000000 paddr 0x20000000 align 2**12
+         filesz 0x00000000 memsz 0x000000c0 flags rw-
+
+Dynamic Section:
+
+Sections:
+Idx Name                Size     VMA      LMA      Type
+  0                     00000000 00000000 00000000 
+  1 .boot2              00000100 10000000 10000000 TEXT
+  2 .text               00004080 10000100 10000100 TEXT
+  3 .rodata             00000504 10004180 10004180 DATA
+  4 .binary_info        00000020 10004684 10004684 DATA
+  5 .ram_vector_table   000000c0 20000000 20000000 BSS
+  6 .uninitialized_data 00000000 200000c0 200000c0 
+  7 .data               00000128 200000c0 100046a4 TEXT
+  8 .tdata              00000000 200001e8 200001e8 DATA
+  9 .tbss               00000000 200001e8 100047cc BSS
+ 10 .bss                000003e8 200001e8 100047cc BSS
+ 11 .heap               00000800 200005d0 200005d0 
+ 12 .scratch_x          00000000 20040000 20040000 
+ 13 .scratch_y          00000000 20041000 20041000 
+ 14 .stack_dummy        00000800 20041000 20041000 
+ 15 .ARM.attributes     00000028 00000000 00000000 
+ 16 .comment            00000045 00000000 00000000 
+ 17 .debug_info         0001c5c8 00000000 00000000 DEBUG
+ 18 .debug_abbrev       00004f1c 00000000 00000000 DEBUG
+ 19 .debug_aranges      00000f00 00000000 00000000 DEBUG
+ 20 .debug_rnglists     00002f9c 00000000 00000000 DEBUG
+ 21 .debug_line         000173f0 00000000 00000000 DEBUG
+ 22 .debug_str          00004653 00000000 00000000 DEBUG
+ 23 .debug_frame        00001b44 00000000 00000000 DEBUG
+ 24 .debug_loclists     00011291 00000000 00000000 DEBUG
+ 25 .debug_line_str     00000381 00000000 00000000 DEBUG
+ 26 .symtab             00003040 00000000 00000000 
+ 27 .strtab             000017d8 00000000 00000000 
+ 28 .shstrtab           0000013a 00000000 00000000 
+
+SYMBOL TABLE:
+10000000 l    d  .boot2	00000000 .boot2
+10000100 l    d  .text	00000000 .text
+10004180 l    d  .rodata	00000000 .rodata
+10004684 l    d  .binary_info	00000000 .binary_info
+20000000 l    d  .ram_vector_table	00000000 .ram_vector_table
+200000c0 l    d  .uninitialized_data	00000000 .uninitialized_data
+200000c0 l    d  .data	00000000 .data
+200001e8 l    d  .tdata	00000000 .tdata
+200001e8 l    d  .tbss	00000000 .tbss
+200001e8 l    d  .bss	00000000 .bss
+200005d0 l    d  .heap	00000000 .heap
+20040000 l    d  .scratch_x	00000000 .scratch_x
+20041000 l    d  .scratch_y	00000000 .scratch_y
+20041000 l    d  .stack_dummy	00000000 .stack_dummy
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_loclists	00000000 .debug_loclists
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    df *ABS*	00000000 bs2_default_padded_checksummed.S.o
+10000000 l       .boot2	00000000 $d
+00000000 l    df *ABS*	00000000 crt0.S.o
+10000100 l       .text	00000000 $d
+100001f6 l     F .text	00000000 _reset_handler
+100001c0 l       .text	00000000 $t
+100001d4 l       .text	00000000 binary_info_header
+10000238 l       .text	00000000 data_cpy_table
+100001e8 l       .text	00000000 $t
+100001ea l       .text	00000000 _enter_vtable_in_r0
+100001fe l       .text	00000000 hold_non_core0_in_bootrom
+10000232 l       .text	00000000 data_cpy
+1000021a l       .text	00000000 bss_fill_test
+10000218 l       .text	00000000 bss_fill_loop
+1000021e l       .text	00000000 platform_entry
+1000022e l       .text	00000000 data_cpy_loop
+10000238 l       .text	00000000 $d
+10000260 l       .text	00000000 $t
+20041000 l       .stack_dummy	00000000 $d
+00000800 l       *ABS*	00000000 StackSize
+200005d0 l       .heap	00000000 $d
+00000800 l       *ABS*	00000000 HeapSize
+10000262 l       .text	00000000 $d
+10000264 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 crti.o
+10000284 l       .text	00000000 $t
+100040fc l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 crtstuff.c
+10004180 l     O .text	00000000 __EH_FRAME_BEGIN__
+10000288 l       .text	00000000 $t
+10000288 l     F .text	00000000 register_tm_clones
+100002a4 l       .text	00000000 $d
+100002b0 l       .text	00000000 $t
+100002b0 l     F .text	00000000 frame_dummy
+100002c8 l       .text	00000000 $d
+200005a0 l     O .bss	00000000 object.0
+1000417c l       .text	00000000 $d
+1000417c l     O .text	00000000 __frame_dummy_init_array_entry
+200005a0 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 main.c
+100002d4 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 run.c
+10004180 l       .rodata	00000000 $d
+10004194 l       .rodata	00000000 $d
+100002e4 l       .text	00000000 $t
+100003f0 l       .text	00000000 $d
+100043d4 l     O .rodata	00000040 stepper_pins
+100043d4 l       .rodata	00000000 $d
+00000000 l    df *ABS*	00000000 stepper.c
+10000414 l       .text	00000000 $t
+10000414 l     F .text	00000200 stepper_rotate_multiple_degrees.part.0
+1000060c l       .text	00000000 $d
+10004414 l     O .rodata	00000020 step_sequence
+10000614 l       .text	00000000 $t
+10004288 l       .rodata	00000000 $d
+100006b0 l       .text	00000000 $t
+10000720 l       .text	00000000 $d
+10004414 l       .rodata	00000000 $d
+00000000 l    df *ABS*	00000000 gpio.c
+10000730 l       .text	00000000 $t
+10000764 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 panic.c
+10004338 l       .rodata	00000000 $d
+10000770 l       .text	00000000 $t
+10000798 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 claim.c
+100007a0 l       .text	00000000 $t
+100007e0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 sync.c
+100007e4 l       .text	00000000 $t
+100007f8 l       .text	00000000 $d
+20000198 l     O .data	00000001 striped_spin_lock_num
+00000000 l    df *ABS*	00000000 sync_spin_lock.c
+100007fc l       .text	00000000 $t
+10000810 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 irq.c
+10000818 l       .text	00000000 $t
+10000830 l       .text	00000000 $d
+1000083c l       .text	00000000 $t
+1000085c l       .text	00000000 $d
+10000860 l       .text	00000000 $t
+100008a8 l       .text	00000000 $d
+10004178 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 lock_core.c
+100008b4 l       .text	00000000 $t
+100008c0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 mutex.c
+100008c4 l       .text	00000000 $t
+1000090c l       .text	00000000 $d
+200000c0 l       .data	00000000 $t
+20000158 l       .data	00000000 $t
+10004168 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 time.c
+10000914 l       .text	00000000 $t
+10000914 l     F .text	00000030 sleep_until_callback
+10000940 l       .text	00000000 $d
+200005cc l     O .bss	00000004 sleep_notifier
+10000944 l       .text	00000000 $t
+10000944 l     F .text	00000300 alarm_pool_irq_handler
+10000c34 l       .text	00000000 $d
+200005b8 l     O .bss	00000010 pools
+10000c44 l       .text	00000000 $t
+10000d00 l       .text	00000000 $d
+2000019c l     O .data	00000018 default_alarm_pool
+10000d20 l       .text	00000000 $t
+10000dcc l       .text	00000000 $d
+10000dd0 l       .text	00000000 $t
+10000e40 l       .text	00000000 $d
+10000e44 l       .text	00000000 $t
+10000f2c l       .text	00000000 $d
+10000f40 l       .text	00000000 $t
+10001040 l       .text	00000000 $d
+10004170 l       .text	00000000 $d
+200005b8 l       .bss	00000000 $d
+200005cc l       .bss	00000000 $d
+2000019c l       .data	00000000 $d
+200001e8 l     O .bss	00000180 default_alarm_pool_entries
+200001e8 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 timer.c
+1000434c l       .rodata	00000000 $d
+1000104c l       .text	00000000 $t
+10001058 l       .text	00000000 $d
+20000568 l     O .bss	00000001 claimed
+10001060 l       .text	00000000 $t
+10001070 l       .text	00000000 $t
+10001080 l       .text	00000000 $d
+10001084 l       .text	00000000 $t
+100010a0 l       .text	00000000 $d
+20000568 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 clocks.c
+2000056c l     O .bss	00000028 configured_freq
+100010a4 l       .text	00000000 $t
+10001190 l       .text	00000000 $d
+10001198 l       .text	00000000 $t
+10001278 l       .text	00000000 $d
+10001280 l       .text	00000000 $t
+10001288 l       .text	00000000 $d
+2000056c l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 pll.c
+1000128c l       .text	00000000 $t
+10001318 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 ticks.c
+10001330 l       .text	00000000 $t
+1000133c l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 bootrom.c
+10001340 l       .text	00000000 $t
+10001350 l       .text	00000000 $t
+10001360 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 xosc.c
+100013a4 l       .text	00000000 $t
+100013c0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 runtime.c
+100013cc l       .text	00000000 $t
+100013cc l     F .text	00000002 first_per_core_initializer
+10004370 l       .rodata	00000000 $d
+100013d0 l       .text	00000000 $t
+100013d8 l       .text	00000000 $d
+100013dc l       .text	00000000 $t
+100013fc l       .text	00000000 $d
+10004174 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 runtime_init.c
+10001404 l       .text	00000000 $t
+1000141c l       .text	00000000 $d
+10001430 l       .text	00000000 $t
+10001444 l       .text	00000000 $d
+1000144c l       .text	00000000 $t
+10001460 l       .text	00000000 $d
+1000146c l       .text	00000000 $t
+1000147c l       .text	00000000 $d
+10001480 l       .text	00000000 $t
+10001488 l       .text	00000000 $t
+1000149c l       .text	00000000 $d
+1000416c l       .text	00000000 $d
+20000000 l       .ram_vector_table	00000000 $d
+10004164 l       .text	00000000 $d
+10004160 l       .text	00000000 $d
+1000415c l       .text	00000000 $d
+10004158 l       .text	00000000 $d
+10004144 l       .text	00000000 $d
+10004140 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 runtime_init_clocks.c
+100014a4 l       .text	00000000 $t
+10001550 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 bit_ops_aeabi.S.o
+10004148 l       .text	00000000 $d
+1000157c l     F .text	00000000 __aeabi_bits_init
+00000004 l       *ABS*	00000000 BITS_FUNC_COUNT
+200001c0 l       .data	00000000 $d
+1000157c l       .text	00000000 $t
+00000000 l       *ABS*	00000000 POPCOUNT32
+00000004 l       *ABS*	00000000 CLZ32
+00000008 l       *ABS*	00000000 CTZ32
+0000000c l       *ABS*	00000000 REVERSE32
+10001584 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 divider_hardware.S.o
+00000001 l       *ABS*	00000000 SIO_DIV_CSR_READY_SHIFT_FOR_CARRY
+00000002 l       *ABS*	00000000 SIO_DIV_CSR_DIRTY_SHIFT_FOR_CARRY
+1000158c l       .text	00000000 $t
+100015dc l       .text	00000000 $t
+10001628 l       .text	00000000 $t
+10001638 l       .text	00000000 divmod_s64s64_savestate
+1000169c l       .text	00000000 l40_1
+100016a8 l       .text	00000000 l41_1
+100016b0 l       .text	00000000 l42_1
+100016e4 l       .text	00000000 l43_1
+100016f0 l       .text	00000000 l44_1
+100016fa l       .text	00000000 l45_1
+10001702 l       .text	00000000 l46_1
+1000170e l       .text	00000000 l47_1
+1000175c l       .text	00000000 y64
+1000173a l       .text	00000000 udiv0
+10001754 l       .text	00000000 $d
+1000175c l       .text	00000000 $t
+100018e2 l       .text	00000000 y64_x48
+100017b8 l       .text	00000000 y64_x32
+100017b4 l       .text	00000000 $d
+100017b8 l       .text	00000000 $t
+10001888 l       .text	00000000 last0
+10001876 l       .text	00000000 $d
+10001878 l       .text	00000000 $d
+10001880 l       .text	00000000 $t
+100019ec l       .text	00000000 y64_x64
+100019dc l       .text	00000000 last1
+10001a42 l       .text	00000000 $d
+10001a44 l       .text	00000000 $d
+10001624 l       .text	00000000 $d
+100015d8 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 double_aeabi_rp2040.S.o
+00000001 l       *ABS*	00000000 SIO_DIV_CSR_READY_SHIFT_FOR_CARRY
+00000002 l       *ABS*	00000000 SIO_DIV_CSR_DIRTY_SHIFT_FOR_CARRY
+10004150 l       .text	00000000 $d
+10001a4c l       .text	00000000 $t
+10001a5e l       .text	00000000 $d
+10001a64 l       .text	00000000 $t
+10001a70 l       .text	00000000 $d
+10001a76 l       .text	00000000 $t
+10001a94 l       .text	00000000 ddiv_save_state
+10001a82 l       .text	00000000 ddiv_shim_call
+10001a8e l       .text	00000000 $d
+10001a94 l       .text	00000000 $t
+10001ab2 l       .text	00000000 ddiv_dsub_nan_helper
+10001abe l       .text	00000000 $d
+10001acc l       .text	00000000 $t
+10001ade l       .text	00000000 __aeabi_dfcmple_guts
+10001b38 l       .text	00000000 $t
+10001b44 l       .text	00000000 $t
+10001b54 l       .text	00000000 $t
+10001b64 l       .text	00000000 $t
+10001b6e l       .text	00000000 $t
+10001b88 l       .text	00000000 $t
+10001bc0 l       .text	00000000 $t
+10001c08 l       .text	00000000 $t
+10001c14 l       .text	00000000 $d
+10001c1c l       .text	00000000 $d
+10001bb8 l       .text	00000000 $d
+10001b32 l       .text	00000000 $d
+10001b34 l       .text	00000000 $d
+10001ac4 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 double_init_rom_rp2040.c
+10001c20 l       .text	00000000 $t
+10001cac l       .text	00000000 $d
+200005c8 l       .bss	00000000 $d
+20000368 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 double_v1_rom_shim_rp2040.S.o
+10001cc4 l       .text	00000000 $t
+00000001 l       *ABS*	00000000 use_hw_div
+d0000000 l       *ABS*	00000000 IOPORT
+00000060 l       *ABS*	00000000 DIV_UDIVIDEND
+00000064 l       *ABS*	00000000 DIV_UDIVISOR
+00000070 l       *ABS*	00000000 DIV_QUOTIENT
+00000078 l       *ABS*	00000000 DIV_CSR
+00000000 l       *ABS*	00000000 debug
+10001cf0 l       .text	00000000 $t
+10001d02 l       .text	00000000 da_entry
+10001d00 l       .text	00000000 $t
+10001d18 l       .text	00000000 l8_1
+10001d24 l       .text	00000000 l8_2
+10001d32 l       .text	00000000 l8_3
+10001d48 l       .text	00000000 l9_1
+10001d54 l       .text	00000000 l9_2
+10001d62 l       .text	00000000 l9_3
+10001e1a l       .text	00000000 da_ygtx
+10001dfc l       .text	00000000 da_xrgty
+10001d74 l       .text	00000000 da_xgty0
+10001d7e l       .text	00000000 da_add
+10001d82 l       .text	00000000 da_pack
+10001dea l       .text	00000000 da_0
+10001dac l       .text	00000000 da_1
+10001de0 l       .text	00000000 da_5
+10001da0 l       .text	00000000 da_2
+10001dbe l       .text	00000000 da_3
+10001db0 l       .text	00000000 da_4
+10001dda l       .text	00000000 da_6
+10001dd2 l       .text	00000000 da_7
+10001e54 l       .text	00000000 da_xmgty
+10001e32 l       .text	00000000 da_yrgtx
+10001e26 l       .text	00000000 da_ygtx0
+10001e50 l       .text	00000000 da_ymgtx
+10001e58 l       .text	00000000 $d
+10001e5c l       .text	00000000 $t
+10001e74 l       .text	00000000 l12_1
+10001e7e l       .text	00000000 l12_2
+10001e96 l       .text	00000000 l13_1
+10001ea0 l       .text	00000000 l13_2
+10001ec2 l       .text	00000000 l14_1
+10001ee8 l       .text	00000000 l15_1
+10001f0e l       .text	00000000 l16_1
+10001f3c l       .text	00000000 l17_1
+10001f90 l       .text	00000000 dm_0
+10001f8a l       .text	00000000 dm_2
+10001faa l       .text	00000000 dm_1
+10001fb2 l       .text	00000000 $d
+10001fb4 l       .text	00000000 $d
+10001fb8 l       .text	00000000 $t
+10001fba l       .text	00000000 ddiv0
+10001fd0 l       .text	00000000 l20_1
+10001fda l       .text	00000000 l20_2
+10002050 l       .text	00000000 l21_1
+1000207a l       .text	00000000 l22_1
+100020d6 l       .text	00000000 dd_0
+100020e8 l       .text	00000000 dd_1
+10002136 l       .text	00000000 dd_2
+10002118 l       .text	00000000 l24_1
+10002150 l       .text	00000000 dd_3
+1000214c l       .text	00000000 dd_5
+1000215a l       .text	00000000 dd_4
+10002168 l       .text	00000000 $t
+1000217e l     F .text	00000000 d2fix
+10002178 l       .text	00000000 $t
+10002194 l       .text	00000000 ret_dzero
+100021e8 l       .text	00000000 $t
+100021fe l       .text	00000000 l60_1
+1000220a l       .text	00000000 l60_2
+10002218 l       .text	00000000 l60_3
+1000221e l       .text	00000000 $d
+10002220 l       .text	00000000 $d
+100021e4 l       .text	00000000 $d
+10002160 l       .text	00000000 $d
+10001cec l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 pico_int64_ops_aeabi.S.o
+10002224 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 float_aeabi_rp2040.S.o
+00000001 l       *ABS*	00000000 SIO_DIV_CSR_READY_SHIFT_FOR_CARRY
+00000002 l       *ABS*	00000000 SIO_DIV_CSR_DIRTY_SHIFT_FOR_CARRY
+10004154 l       .text	00000000 $d
+10002258 l       .text	00000000 $t
+10002278 l       .text	00000000 fdiv_save_state
+10002272 l       .text	00000000 fdiv_shim_call
+10002292 l       .text	00000000 fdiv_fsub_nan_helper
+100022a0 l       .text	00000000 $t
+100022ac l       .text	00000000 $t
+100022b4 l       .text	00000000 $d
+100022bc l       .text	00000000 $d
+100022a6 l       .text	00000000 $d
+100022a8 l       .text	00000000 $d
+10002298 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 float_init_rom_rp2040.c
+100022c0 l       .text	00000000 $t
+10002310 l       .text	00000000 $d
+20000468 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 float_v1_rom_shim_rp2040.S.o
+10002324 l       .text	00000000 $t
+10002350 l       .text	00000000 $t
+10002376 l       .text	00000000 $d
+10002378 l       .text	00000000 $d
+1000234c l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 mem_ops_aeabi.S.o
+1000414c l       .text	00000000 $d
+00000000 l       *ABS*	00000000 MEMSET
+00000004 l       *ABS*	00000000 MEMCPY
+00000008 l       *ABS*	00000000 MEMSET4
+0000000c l       *ABS*	00000000 MEMCPY4
+00000004 l       *ABS*	00000000 MEM_FUNC_COUNT
+200001d0 l       .data	00000000 $d
+10002380 l       .text	00000000 $t
+10002390 l       .text	00000000 $t
+10002396 l       .text	00000000 $d
+10002398 l       .text	00000000 $d
+10002388 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 printf.c
+1000239c l       .text	00000000 $t
+1000239c l     F .text	00000002 _out_null
+100023a0 l       .text	00000000 $t
+100023a0 l     F .text	000000ac _out_rev
+1000244c l       .text	00000000 $t
+1000244c l     F .text	000001ca _ntoa_format
+10002618 l       .text	00000000 $t
+10002618 l     F .text	0000000e _out_char
+10002628 l       .text	00000000 $t
+10002628 l     F .text	00000010 _out_fct
+100043bc l       .rodata	00000000 $d
+10002638 l       .text	00000000 $t
+10002638 l     F .text	000004a8 _ftoa
+10002ae0 l     F .text	0000057c _etoa
+10002980 l       .text	00000000 $d
+10004630 l     O .rodata	00000050 pow10.0
+100029a4 l       .text	00000000 $t
+10002adc l       .text	00000000 $d
+10002ae0 l       .text	00000000 $t
+10002d18 l       .text	00000000 $d
+10002d24 l       .text	00000000 $t
+10002ffc l       .text	00000000 $d
+1000305c l       .text	00000000 $t
+1000305c l     F .text	00000be0 _vsnprintf
+10004494 l       .rodata	00000000 $d
+100033a8 l       .text	00000000 $d
+2000059c l     O .bss	00000004 lazy_vsnprintf
+100033c0 l       .text	00000000 $t
+100037c8 l       .text	00000000 $d
+100037cc l       .text	00000000 $t
+10003c3c l       .text	00000000 $t
+10003c5c l       .text	00000000 $d
+10003c60 l       .text	00000000 $t
+10003c88 l       .text	00000000 $d
+10004630 l       .rodata	00000000 $d
+2000059c l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 newlib_interface.c
+10003c90 l       .text	00000000 $t
+10003c94 l       .text	00000000 $t
+10003c9c l       .text	00000000 $t
+10003cc0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 stdio.c
+10003cc8 l       .text	00000000 $t
+10003cc8 l     F .text	0000000e stdio_out_chars_no_crlf
+10003cd8 l       .text	00000000 $t
+10003cd8 l     F .text	000000b0 stdio_out_chars_crlf
+10003d84 l       .text	00000000 $d
+10004680 l     O .rodata	00000002 crlf_str.0
+10003d88 l       .text	00000000 $t
+10003d88 l     F .text	00000064 stdio_buffered_printer
+10003de4 l       .text	00000000 $d
+20000594 l     O .bss	00000004 drivers
+20000598 l     O .bss	00000004 filter
+200001e0 l     O .data	00000008 print_mutex
+10003dec l       .text	00000000 $t
+10003ecc l       .text	00000000 $d
+10003ee8 l       .text	00000000 $t
+10003eec l       .text	00000000 $t
+10003f6c l       .text	00000000 $d
+10003f80 l       .text	00000000 $t
+10003fb8 l       .text	00000000 $d
+10003fbc l       .text	00000000 $t
+10004070 l       .text	00000000 $d
+10004088 l       .text	00000000 $t
+10004680 l       .rodata	00000000 $d
+200001e0 l       .data	00000000 $d
+20000598 l       .bss	00000000 $d
+20000594 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 strlen-stub.c
+100040a0 l       .text	00000000 $t
+100040f4 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 standard_binary_info.c
+10004684 l       .binary_info	00000000 $d
+10004684 l     O .binary_info	00000004 __bi_ptr84
+10004434 l     O .rodata	0000000c __bi_84
+1000437c l       .rodata	00000000 $d
+10004434 l       .rodata	00000000 $d
+10004688 l       .binary_info	00000000 $d
+10004688 l     O .binary_info	00000004 __bi_ptr78
+10004440 l     O .rodata	0000000c __bi_78
+10004440 l       .rodata	00000000 $d
+1000468c l       .binary_info	00000000 $d
+1000468c l     O .binary_info	00000004 __bi_ptr60
+1000444c l     O .rodata	0000000c __bi_60
+1000444c l       .rodata	00000000 $d
+10004690 l       .binary_info	00000000 $d
+10004690 l     O .binary_info	00000004 __bi_ptr54
+10004458 l     O .rodata	0000000c __bi_54
+10004458 l       .rodata	00000000 $d
+10004694 l       .binary_info	00000000 $d
+10004694 l     O .binary_info	00000004 __bi_ptr48
+10004464 l     O .rodata	0000000c __bi_48
+10004464 l       .rodata	00000000 $d
+10004698 l       .binary_info	00000000 $d
+10004698 l     O .binary_info	00000004 __bi_ptr42
+10004470 l     O .rodata	0000000c __bi_42
+10004470 l       .rodata	00000000 $d
+1000469c l       .binary_info	00000000 $d
+1000469c l     O .binary_info	00000004 __bi_ptr34
+1000447c l     O .rodata	0000000c __bi_34
+1000447c l       .rodata	00000000 $d
+100046a0 l       .binary_info	00000000 $d
+100046a0 l     O .binary_info	00000004 __bi_ptr26
+10004488 l     O .rodata	0000000c __bi_26
+10004488 l       .rodata	00000000 $d
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+20000180 l       .data	00000000 $t
+00000000 l    df *ABS*	00000000 
+200001e8 l       .data	00000000 __mutex_array_end
+200001e0 l       .data	00000000 __mutex_array_start
+10004180 l       .text	00000000 __init_array_end
+1000417c l       .text	00000000 __preinit_array_end
+1000417c l       .text	00000000 __init_array_start
+10004140 l       .text	00000000 __preinit_array_start
+20000198 l       .data	00000000 $d
+100001d4 l       .text	00000000 $d
+20000188 l     F .data	00000010 __best_effort_wfe_or_timeout_veneer
+20000188 l       .data	00000000 $t
+20000194 l       .data	00000000 $d
+10004100 l     F .text	00000010 __mutex_exit_veneer
+10004100 l       .text	00000000 $t
+1000410c l       .text	00000000 $d
+10004110 l     F .text	00000010 ____aeabi_ldiv0_veneer
+10004110 l       .text	00000000 $t
+1000411c l       .text	00000000 $d
+10004120 l     F .text	00000010 ____aeabi_idiv0_veneer
+10004120 l       .text	00000000 $t
+1000412c l       .text	00000000 $d
+10004130 l     F .text	00000010 __mutex_try_enter_block_until_veneer
+10004130 l       .text	00000000 $t
+1000413c l       .text	00000000 $d
+10001b6e g     F .text	00000000 __wrap___aeabi_dcmpun
+10000860 g     F .text	00000054 irq_set_exclusive_handler
+10000000 g       .boot2	00000000 __boot2_start__
+10001a76 g     F .text	00000000 __wrap___aeabi_ddiv
+200001d0 g       .data	00000000 aeabi_bits_funcs_end
+10002264 g     F .text	00000000 __wrap___aeabi_fadd
+100001cc  w    F .text	00000000 isr_irq30
+200000c0 g       .data	00000000 __data_start__
+10001668 g     F .text	00000000 divmod_u64u64_savestate
+100001cc g     F .text	00000000 __unhandled_user_irq
+100015e4 g     F .text	00000000 divmod_u32u32_unsafe
+20000468 g     O .bss	00000100 sf_table
+10001c08 g     F .text	00000000 double2uint_z
+100046a4 g       .binary_info	00000000 __binary_info_end
+200001e8 g       .tbss	00000000 __tls_base
+10001688 g     F .text	00000000 divmod_s64s64_unsafe
+10001bc0 g     F .text	00000000 __wrap___aeabi_d2iz
+100015c0 g     F .text	00000000 divmod_s32s32_savestate
+10001280 g     F .text	0000000c clock_get_hz
+1000219a  w    F .text	00000000 d2fix_a
+10003c9c g     F .text	0000002c runtime_init
+100007fc g     F .text	0000001c spin_locks_reset
+10000818  w    F .text	00000024 runtime_init_per_core_irq_priorities
+10004684 g       .rodata	00000000 __exidx_end
+100013a4 g     F .text	00000028 xosc_init
+10002380 g     F .text	00000000 __aeabi_mem_init
+10001340 g     F .text	0000000e rom_func_lookup
+10001ab2 g     F .text	00000000 __wrap___aeabi_dmul
+10003eec g     F .text	00000094 stdio_putchar
+100046a4 g       *ABS*	00000000 __etext
+10001710 g     F .text	00000000 divmod_u64u64_unsafe
+100001cc  w    F .text	00000000 isr_irq13
+100001e8 g       .text	00000000 __embedded_block_end
+100001cc  w    F .text	00000000 isr_irq27
+1000158c g     F .text	00000000 __wrap___aeabi_idivmod
+1000225e g     F .text	00000000 __wrap___aeabi_fsub
+100013d0  w    F .text	0000000c hard_assertion_failure
+20040000 g       .scratch_x	00000000 __scratch_x_end__
+100001cc  w    F .text	00000000 isr_irq31
+100001c8  w    F .text	00000000 isr_pendsv
+10001adc g     F .text	00000000 __wrap___aeabi_cdcmple
+1000416c g     O .text	00000004 __pre_init_runtime_init_install_ram_vector_table
+100001cc  w    F .text	00000000 isr_irq5
+200001e8 g     O .data	00000000 .hidden __TMC_END__
+100001cc  w    F .text	00000000 isr_irq11
+100001c2  w    F .text	00000000 isr_nmi
+1000217a g     F .text	00000000 double2ufix64_shim
+100001cc  w    F .text	00000000 isr_irq23
+100021e8 g     F .text	00000000 dunpacks
+10001cf6 g     F .text	00000000 dsub_shim
+10001acc g     F .text	00000000 __wrap___aeabi_cdrcmple
+10001b88 g     F .text	00000000 __wrap___aeabi_ui2d
+20040000 g       .bss	00000000 __HeapLimit
+10001404  w    F .text	0000002c runtime_init_early_resets
+200001e8 g       .tbss	00000000 __bss_start__
+100022a0 g     F .text	00000000 float2uint
+20041000 g       .scratch_y	00000000 __scratch_y_start__
+10003eec g     F .text	00000094 __wrap_putchar
+100022a0 g     F .text	00000000 float2uint_z
+10001198 g     F .text	000000e8 clock_configure_undivided
+10001a4c g     F .text	00000000 __wrap___aeabi_drsub
+10001b88 g     F .text	00000000 uint2double
+100001cc  w    F .text	00000000 isr_irq18
+100015dc g     F .text	00000000 __wrap___aeabi_uidiv
+10004684 g       .rodata	00000000 __exidx_start
+100001c4  w    F .text	00000000 isr_hardfault
+10001b90 g     F .text	00000000 __wrap___aeabi_i2d
+1000144c  w    F .text	00000020 runtime_init_post_clock_resets
+10001070 g     F .text	00000014 time_us_64
+10001fb8 g     F .text	00000000 ddiv_shim
+10000100 g       .text	00000000 __logical_binary_start
+10000284 g     F .text	00000000 _init
+100001cc  w    F .text	00000000 isr_irq28
+100001cc  w    F .text	00000000 isr_irq19
+10001b38 g     F .text	00000000 __wrap___aeabi_dcmplt
+10003c3c g     F .text	00000024 vfctprintf
+10001b64 g     F .text	00000000 __wrap___aeabi_dcmpgt
+10003c60 g     F .text	00000030 weak_raw_vprintf
+10002292 g     F .text	00000000 __wrap___aeabi_fmul
+100001e8 g     F .text	00000000 _entry_point
+100001cc  w    F .text	00000000 isr_irq0
+10004160 g     O .text	00000004 __pre_init_runtime_init_rp2040_gpio_ie_disable
+10002178 g     F .text	00000000 double2uint64_shim
+100047cc g       *ABS*	00000000 __scratch_x_source__
+10003dec g     F .text	000000fc stdio_put_string
+10004140 g     O .text	00000004 __pre_init_runtime_init_early_resets
+20041800 g       *ABS*	00000000 __StackBottom
+10001480  w    F .text	00000008 runtime_init_spin_locks_reset
+100001cc  w    F .text	00000000 isr_irq6
+100001c0  w    F .text	00000000 isr_invalid
+10001330 g     F .text	00000010 tick_start
+10000e44 g     F .text	000000fc sleep_ms
+100001d2 g       .text	00000000 unhandled_user_irq_num_in_r0
+10001e5c g     F .text	00000000 dmul_shim
+100007a0 g     F .text	00000044 hw_claim_or_assert
+10001a52 g     F .text	00000000 __wrap___aeabi_dsub
+10001360 g     F .text	00000042 rom_funcs_lookup
+100047cc g       .ARM.attributes	00000000 __flash_binary_end
+10001430  w    F .text	0000001c runtime_init_usb_power_down
+20041000 g       *ABS*	00000000 __StackOneBottom
+200005d0 g       .heap	00000000 end
+20041000 g       .bss	00000000 __StackOneTop
+100010a4 g     F .text	000000f4 clock_configure_int_divider
+200001e8 g       .data	00000000 __data_end__
+10002224 g     F .text	00000000 __wrap___aeabi_lmul
+100007e4 g     F .text	00000018 next_striped_spin_lock_num
+10001cf0 g     F .text	00000000 drsub_shim
+200005d0 g       .bss	00000000 __bss_end__
+10001b54 g     F .text	00000000 __wrap___aeabi_dcmpge
+20000158 g     F .data	00000028 mutex_exit
+20041000 g       .scratch_y	00000000 __scratch_y_end__
+10001658 g     F .text	00000000 div_u64u64
+10004684 g       .binary_info	00000000 __binary_info_start
+10002258 g     F .text	00000000 __wrap___aeabi_frsub
+10003f80 g     F .text	0000003c __wrap_puts
+100047cc g       *ABS*	00000000 __scratch_y_source__
+10001a64 g     F .text	00000000 __wrap___aeabi_dadd
+100001cc  w    F .text	00000000 isr_irq22
+10000100 g       .text	00000000 __vectors
+100001cc  w    F .text	00000000 isr_irq17
+100008c4  w    F .text	00000050 runtime_init_mutex
+1000415c g     O .text	00000004 __pre_init_runtime_init_post_clock_resets
+100001cc  w    F .text	00000000 isr_irq14
+100022a0 g     F .text	00000000 __wrap___aeabi_f2uiz
+10000770 g     F .text	00000030 panic
+200001d0 g       .data	00000000 aeabi_mem_funcs
+10004088 g     F .text	00000018 stdio_printf
+100001c0 g       .text	00000000 __default_isrs_start
+10000000 g       .boot2	00000000 __flash_binary_start
+10001b90 g     F .text	00000000 int2double
+20000180  w    F .data	00000002 .hidden __aeabi_ldiv0
+100022ac g     F .text	00000000 __wrap___aeabi_f2d
+10001b44 g     F .text	00000000 __wrap___aeabi_dcmple
+10001d00 g     F .text	00000000 dadd_shim
+100001cc  w    F .text	00000000 isr_irq2
+200001e8 g       .tdata	00000000 __tdata_end
+10000100 g       .boot2	00000000 __boot2_end__
+10000f40 g     F .text	0000010c best_effort_wfe_or_timeout
+100002d4 g     F .text	0000000e main
+10004158 g     O .text	00000004 __pre_init_runtime_init_clocks
+100001cc  w    F .text	00000000 isr_irq10
+100008b4 g     F .text	00000010 lock_init
+100001cc  w    F .text	00000000 isr_irq8
+100001e8 g       .text	00000000 __binary_info_header_end
+10004174 g     O .text	00000004 __pre_init_first_per_core_initializer
+1000083c g     F .text	00000024 irq_set_enabled
+1000158c g     F .text	00000000 divmod_s32s32
+1000158c g     F .text	00000000 div_s32s32
+200001e8 g       .tbss	00000000 __tls_end
+200005d0 g       .heap	00000000 __end__
+1000158c g     F .text	00000000 __wrap___aeabi_idiv
+200001c0 g       .data	00000000 aeabi_bits_funcs
+100015dc g     F .text	00000000 __wrap___aeabi_uidivmod
+20000000 g     O .ram_vector_table	000000c0 ram_vector_table
+100001cc  w    F .text	00000000 isr_irq24
+200005c8  w    O .bss	00000004 sf_clz_func
+100001cc  w    F .text	00000000 isr_irq1
+100040fc g     F .text	00000000 _fini
+10001adc g     F .text	00000000 __wrap___aeabi_cdcmpeq
+100002e4 g     F .text	00000130 run
+10001658 g     F .text	00000000 divmod_u64u64
+10000d20 g     F .text	000000b0 alarm_pool_add_alarm_at_force_in_context
+100015dc g     F .text	00000000 div_u32u32
+100001cc  w    F .text	00000000 isr_irq7
+20042000 g       .bss	00000000 __StackTop
+100001cc  w    F .text	00000000 isr_irq21
+10002390 g     F .text	00000000 __wrap___aeabi_memcpy
+1000226a g     F .text	00000000 __wrap___aeabi_fdiv
+10001628 g     F .text	00000000 div_s64s64
+10002168 g     F .text	00000000 double2uint_shim
+100001cc  w    F .text	00000000 isr_irq20
+10001628 g     F .text	00000000 divmod_s64s64
+100001cc  w    F .text	00000000 isr_irq15
+10003ee8 g     F .text	00000004 stdio_init_all
+100001cc  w    F .text	00000000 isr_irq25
+100022c0 g     F .text	00000064 __aeabi_float_init
+10001c08 g     F .text	00000000 double2uint
+10001c08 g     F .text	00000000 __wrap___aeabi_d2uiz
+100001c6  w    F .text	00000000 isr_svcall
+10001c20 g     F .text	000000a4 __aeabi_double_init
+1000146c  w    F .text	00000014 runtime_init_rp2040_gpio_ie_disable
+20042000 g       *ABS*	00000000 __stack
+100015dc g     F .text	00000000 divmod_u32u32
+10001658 g     F .text	00000000 __wrap___aeabi_uldivmod
+20040000 g       .scratch_x	00000000 __scratch_x_start__
+10000100 g       .text	00000000 __VECTOR_TABLE
+10001594 g     F .text	00000000 divmod_s32s32_unsafe
+200000c0 g     F .data	00000098 mutex_try_enter_block_until
+20040000 g       .bss	00000000 __StackLimit
+10004088 g     F .text	00000018 __wrap_printf
+10002390 g     F .text	00000000 __wrap_memcpy
+200001e0 g       .data	00000000 aeabi_mem_funcs_end
+10004168 g     O .text	00000004 __pre_init_runtime_init_mutex
+10003c94 g     F .text	00000006 exit
+100001cc  w    F .text	00000000 isr_irq4
+100014a4  w    F .text	000000d8 runtime_init_clocks
+20000368 g     O .bss	00000100 sd_table
+10003f80 g     F .text	0000003c stdio_puts
+200001e8 g       .bss	00000000 __tbss_end
+100006b0 g     F .text	00000080 stepper_demo_sequence
+10000614 g     F .text	0000009a stepper_init
+10001488 g     F .text	0000001c runtime_init_install_ram_vector_table
+20000180  w    F .data	00000002 .hidden __aeabi_idiv0
+1000216a g     F .text	00000000 double2ufix_shim
+10003fbc g     F .text	000000cc __wrap_vprintf
+10003c90  w    F .text	00000004 _exit
+100001cc  w    F .text	00000000 isr_irq16
+10004170 g     O .text	00000004 __pre_init_runtime_init_default_alarm_pool
+100001cc  w    F .text	00000000 isr_irq29
+100001cc  w    F .text	00000000 isr_irq26
+10001628 g     F .text	00000000 __wrap___aeabi_ldivmod
+100040a0 g     F .text	0000005c strlen
+10001cc4 g     F .text	00000000 double_table_shim_on_use_helper
+100001cc g       .text	00000000 __default_isrs_end
+10004164 g     O .text	00000004 __pre_init_runtime_init_spin_locks_reset
+10002324 g     F .text	00000000 float_table_shim_on_use_helper
+100013dc g     F .text	00000028 runtime_run_initializers
+10000730 g     F .text	00000040 gpio_init
+10004144 g     O .text	00000004 __pre_init_runtime_init_usb_power_down
+10001350 g     F .text	00000010 rom_data_lookup
+100001cc  w    F .text	00000000 isr_irq3
+1000160c g     F .text	00000000 divmod_u32u32_savestate
+100001ca  w    F .text	00000000 isr_systick
+10004178 g     O .text	00000004 __pre_init_runtime_init_per_core_irq_priorities
+10003fbc g     F .text	000000cc stdio_vprintf
+1000104c g     F .text	00000014 timer_hardware_alarm_claim
+10002350 g     F .text	00000000 float2double_shim
+10001bc0 g     F .text	00000000 double2int_z
+10000dd0 g     F .text	00000074 alarm_pool_cancel_alarm
+10001084 g     F .text	00000020 busy_wait_until
+10001060 g     F .text	00000010 timer_time_us_64
+100001cc  w    F .text	00000000 isr_irq12
+100001cc  w    F .text	00000000 isr_irq9
+1000128c g     F .text	000000a4 pll_init
+10000c44  w    F .text	000000dc runtime_init_default_alarm_pool
