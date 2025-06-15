@@ -1,6 +1,6 @@
 ![image](https://github.com/mytechnotalent/stepper/blob/main/stepper.jpeg?raw=true)
 
-# Raspberry Pi Pico LED & Stepper Motor Control
+# Pico C Stepper
 
 A professional embedded C application for the Raspberry Pi Pico that combines LED blinking with 4-channel stepper motor control using ULN2003 driver boards. The project demonstrates GPIO control, timing functions, and modular code organization suitable for embedded development.
 
